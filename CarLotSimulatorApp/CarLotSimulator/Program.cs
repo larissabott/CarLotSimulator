@@ -22,6 +22,30 @@ namespace CarLotSimulator
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
 
+            //standard number intialization
+            Car bmw = new Car();
+            bmw.Year = 2016;
+            bmw.Make = "BMW";
+            bmw.Model = "328i";
+            bmw.EngineNoise = "Vroom";
+            bmw.HonkNoise = "Beep Boop";
+            bmw.IsDriveable = true;
+
+            bmw.MakeEngineNoise();
+            bmw.MakeHonkNoise();
+
+            //Object intializer syntax
+            Car prius = new Car() { Year = 2014, Make = "Toyota, Model = Prius", EngineNoise = "Silent", HonkNoise = "Help" };
+
+            prius.MakeEngineNoise();
+            prius.MakeHonkNoise();
+
+            //constructor initialization
+            Car someOtherCar = new Car(5000, "Mars Inc.", "Omega", "Space Noises", "Move bitch get out the way");
+
+            someOtherCar.MakeEngineNoise();
+            someOtherCar.MakeHonkNoise();
+
             //*************BONUS X 2*************//
 
             //Create a CarLot class
